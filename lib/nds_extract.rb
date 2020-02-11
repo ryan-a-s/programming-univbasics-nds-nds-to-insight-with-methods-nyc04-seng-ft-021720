@@ -27,13 +27,13 @@ end
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
-  result = {}
   pp nds
-  index = 0
-  while index < nds.length do
-    result[nds][index] = gross_for_director(nds)
-    index += 1
-  end
-  result
-  nil
+  result = {}
+#  index = 0
+#  while index < nds.length do
+#    result[nds][index] = gross_for_director(nds)
+#    index += 1
+#  end
+#  result
+#  nil
 end
