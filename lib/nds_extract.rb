@@ -4,7 +4,7 @@ require 'directors_database'
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
-  director_data.first.values.first
+  puts director_data.first.values.first
   index = 0
   length = director_data[:name][index][:movies].length
   total_gross = 0
