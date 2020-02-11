@@ -31,7 +31,7 @@ def directors_totals(nds)
   index = 0
   while index < nds.length do
     director_name = nds[index][:name]
-    director_gross = gross_for_directory(nds[index][:name])
+    director_gross = gross_for_director(nds[index][:name])
     result.merge![director_name] = director_gross
     index += 1
   end
