@@ -28,8 +28,7 @@ def directors_totals(nds)
   while index < nds.length do
     director_name = nds[index][:name]
     director_gross = gross_for_director(nds[index])
-    result.merge![:name] = director_name
-    result.merge![:movies] = director_gross
+    result.merge![director_name] = director_gross
     index += 1
   end
   p result
