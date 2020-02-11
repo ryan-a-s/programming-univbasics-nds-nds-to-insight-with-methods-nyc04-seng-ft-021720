@@ -6,10 +6,10 @@ require 'directors_database'
 def gross_for_director(director_data)
   pp director_data
   index = 0
-  length = director_data.values.length
+  length = director_data.values[index + 1].length
   total_gross = 0
   while index < length do
-    total_gross += director_data[:movies][index][:worldwide_gross]
+    total_gross += director_data.values[index + 1][index][:worldwide_gross]
     index += 1
   end
   total_gross
