@@ -30,7 +30,7 @@ def directors_totals(nds)
   result = {}
   index = 0
   while index < nds[index].length do
-    result(nds[index][:name]) = gross_for_directory(nds[index][:name])
+    result(nds[index][:name]) => gross_for_directory(nds[index][:name])
     index += 1
   end
   result
