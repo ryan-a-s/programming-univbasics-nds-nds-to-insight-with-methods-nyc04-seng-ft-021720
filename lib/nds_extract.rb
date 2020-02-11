@@ -5,19 +5,15 @@ require 'directors_database'
 # using director_data as input
 def gross_for_director(director_data)
   index = 0
-  director_name = directors_database[index].values[index]
-#  first_director_hash = director_databa.find{ |x| x[:name] == first_director_name }
   while index < director_data.length do
     total_gross = 0
     inner_index = 0
-    if director_data.find{ |x| x[:name] == director_name }
-      inner_len = director_data[:movies].length
-        while inner_index < inner_len do
-          total_gross += director_data[:movies][inner_index][:worldwide_gross]
-          inner_index += 1
-        end
-        index += 1
-    end
+    inner_len = director_data[:movies].length
+      while inner_index < inner_len do
+        total_gross += director_data[:movies][inner_index][:worldwide_gross]
+        inner_index += 1
+      end
+    index += 1
   end
   total_gross
 end
@@ -32,9 +28,8 @@ def directors_totals(nds)
   while index < nds.length do
     director_name = nds[index][:name]
     director_gross = gross_for_director(nds[index])
-    result[director_name] = director_gross
+    result.merge![director_name] = director_gross
     index += 1
   end
-  p result
-  nil
+  result
 end
