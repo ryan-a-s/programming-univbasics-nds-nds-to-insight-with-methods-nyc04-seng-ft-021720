@@ -6,10 +6,11 @@ require 'directors_database'
 def gross_for_director(director_data)
   index = 0
   director_name = directors_database[index].values[index]
+#  first_director_hash = director_databa.find{ |x| x[:name] == first_director_name }
   while index < director_data.length do
     total_gross = 0
     inner_index = 0
-    if director_data.find{ |x| x[:name] == first_director_name }
+    if director_data.find{ |x| x[:name] == director_name }
       inner_len = director_data[:movies].length
         while inner_index < inner_len do
           total_gross += director_data[:movies][inner_index][:worldwide_gross]
