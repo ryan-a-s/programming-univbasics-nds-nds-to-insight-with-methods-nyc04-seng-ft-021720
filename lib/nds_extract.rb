@@ -33,6 +33,6 @@ def directors_totals(nds)
     result[:movies] = director_gross
     index += 1
   end
-  result
+  p result
   nil
 end
